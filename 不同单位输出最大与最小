@@ -1,0 +1,89 @@
+//最小和最大
+#include<iostream>
+#include<string>
+#include<vector>
+#include<algorithm>
+#include<cmath>
+#include<limits>
+using namespace std;
+int main()
+{
+	string unit;
+	double m, in, ft, cm;
+	double max = 0;
+	double min = 0;
+	double val = 0;
+	cin >> val >> unit;
+	if (unit == "cm")
+		min = max = val;
+	else if (unit == "m")
+		max = min = val * 100;
+	else if (unit == "in")
+		max = min = val * 2.54;
+	else if (unit == "ft")
+		max = min = val * 30.48;
+	else
+	{
+		cout << "error" << '\n';
+		return 0;
+	}
+	while (cin >> val >> unit)
+	{
+		if (unit == "cm")
+
+			if (val >= max)
+			{
+				max = val;
+				cout << "the largest so far is" << val << unit << '\n';
+			}
+			else
+			{
+				min = val;
+				cout << "the smallest so far is" << val << unit << '\n';
+			}
+		else if (unit == "m")
+		{
+			if ((val * 100) > max)
+			{
+				cout << "the largest so far is" << val << unit << '\n';
+			}
+			else
+			{
+				cout << "the smallest so far is" << val << unit << '\n';
+			}
+		}
+		else  if (unit == "in")
+		{
+			if ((val * 2.54) >= max)
+			{
+				max = val * 2.54;
+				cout << "the largest so far is" << val << unit << '\n';
+			}
+			else
+			{
+				min = val * 2.54;
+				cout << "the smallest so far is" << val << unit << '\n';
+			}
+		}
+		else if (unit == "ft")
+			if ((val * 30.48) > max)
+			{
+				max = val * 30.48;
+				cout << "the largest so far is" << val << unit << '\n';
+			}
+			else
+			{
+				min = val * 30.48;
+				cout << "the smallest so far is" << val << unit << '\n';
+			}
+		else
+		{
+			cout << "error!\n";
+			return 0;
+		}
+
+
+
+	}
+	return 0;
+}
