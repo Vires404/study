@@ -1,0 +1,54 @@
+//中英数字互译
+#include<iostream>
+#include<string>
+#include<cmath>
+#include<vector>
+#include<algorithm>
+using namespace std;
+int main()
+{
+	string character;
+	int n, i, j;
+	char m;
+	vector<string>a;
+	a.push_back("zero");
+	a.push_back("one");
+	a.push_back("two");
+	a.push_back("three");
+	a.push_back("four");
+	a.push_back("five");
+	a.push_back("six");
+	a.push_back("seven");
+	a.push_back("eight");
+	a.push_back("nine");
+	while (1)
+	{
+		cout << "choose a mood s or z" << endl;
+		cin >> m;
+		switch (m)
+		{
+		case's':
+			cout << "please enter the number" << endl;
+			cin >> n;
+			{
+				if (n >= 0 && n <= 9)
+					cout << a[n] << endl;
+				else
+					cout << "error" << endl;
+			}
+			break;
+		case'z':
+			cout << "please enter the character" << endl;
+			cin >> character;
+			for (i = 0; i <= 9; i++)
+			{
+				if (character == a[i])
+					cout << i << endl;
+				else
+					cout << "error" << endl;
+			}
+			break;
+		default:cout << "error" << endl;
+		}
+	}
+}
