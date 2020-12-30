@@ -1,0 +1,47 @@
+//practice 1
+#include<iostream>
+using namespace std;
+int main()
+{
+   int sum=0;
+   int i=50;
+   while(i<=100)
+   {
+      sum +=i;
+      ++i;
+   }
+   cout<<"the sum of ints from 50-100 is"<<sum<<endl;
+   system("pause");
+   return 0;
+}
+//practice 2
+#include<iostream>
+using namespace std;
+int main()
+{
+   int i=10;
+   while(i<=10&&i>=0)
+   {
+      cout<<i<<endl;
+      --i;
+   }
+   system("pause");
+   return 0;
+}
+/practice 3
+#include<iostream>
+using namespace std;
+int main()
+{
+   cout<<"please enter two numbers(tip:the latter is bigger than another"<<endl;
+   int a,b;
+   int i=b-1;
+   cin>>a>>b;
+   while(i>a)
+   {
+      cout<<i<<endl;
+      i=--b;
+   }
+   system("pause");
+   return 0;//when i read the code of practice 3, there something go wrong, it will cout a unkown number and under is correct, tomorrow i will change the code
+}
