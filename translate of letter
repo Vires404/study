@@ -1,0 +1,13 @@
+//the translate of letter
+#include<iostream>
+using namespace std;
+int main()
+{
+   char a;
+   cin>>a;
+   cout<<char(a-32);
+   system("pause");
+   return 0;
+}
+//at first i want to use the vector to achieve, but i failed, then i look the answer and find i am so silly
+//this version is the answer after i check
