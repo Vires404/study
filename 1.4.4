@@ -1,0 +1,33 @@
+//1.4.4 i just change the code which i write before in the 1.4.1
+#include<iostream>
+using namespace std;
+int main()
+{
+   cout<<"please enter two numbers"<<endl;
+   int a,b;
+   int i=b;
+   cin>>a>>b;
+   if(a<b)
+   {
+   while(i>a)
+   {
+      cout<<b-1<<endl;
+      i=--b-1;
+   }
+   }
+   else if(a>b)
+   {
+      while(i>b)
+      {
+         cout<<a-1<<endl;
+         i=--a-1;
+      }
+   }
+   else
+   {
+      cout<<"error"<<endl;
+   }
+   
+   system("pause");
+   return 0;
+}
