@@ -1,0 +1,32 @@
+#include<algorithm>
+#include<iostream>
+#include<ctime>
+using namespace std;
+int main()
+{
+    srand((unsigned int)time(NULL));
+    int number=rand()%100+1;//numebr from 0+1-99+1
+    //cout<<number<<endl;
+    int val=0;
+    while (1)
+    {
+        cin>>val; 
+        if(val>number)
+        {
+            cout<<"bigger!"<<endl;
+        }
+        else if(val<number)
+        {
+            cout<<"smller"<<endl;
+        }
+        else
+        {
+            cout<<"correct"<<endl;
+            break;//exit the loop
+        }
+    }
+    
+    system("pause");
+    return 0;
+}
+//the time is included in the ctime, produce a number according to the time
