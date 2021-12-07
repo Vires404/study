@@ -3,18 +3,33 @@
 #include<algorithm>
 #include<vector>
 using namespace std;
+struct student
+{
+    string name;
+    int score;
+    int age;
+};
+struct teacher
+{
+    int id;
+    int age;
+    string name;
+    student stu;
+};
 int main()
 {
-    double number;
-	vector<double>numbers;
-	for (double number; cin >> number;)
-		{
-            numbers.push_back(number);
-        }
-	sort(numbers.begin(), numbers.end());
-    for(int i=0;i<numbers.size();i++)
-    cout<<numbers[i]<<endl;
-	cout << "media number is" << numbers[numbers.size()/2] << '\n';
+
+    teacher t1;
+    t1.age=20;
+    t1.id=1001;
+    t1.name="king";
+    t1.stu.name="king 1";
+    t1.stu.age=10;
+    t1.stu.score=100;
+    cout<<t1.name<<endl;
+    cout<<t1.id<<endl;
+    cout<<t1.stu.name<<endl;
+    cout<<t1.stu.score<<endl; 
     system("pause");
     return 0;
 }
